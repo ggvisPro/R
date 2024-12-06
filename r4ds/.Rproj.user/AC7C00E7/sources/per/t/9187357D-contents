@@ -1,0 +1,13 @@
+x <- tribble( ~key, ~val_x, ~atime,
+              1, "x1", 1, 
+              2, "x2", 3,
+              3, "x3", 2
+)
+y <- tribble(
+  ~key, ~val_y, ~btime,
+  1, "y1", 1,
+  2, "y2", 2,
+  4, "y3", 3
+  )
+ inner_join(x, y, by = c("atime" = "btime"))
+ 
